@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Segurança Digital: A Matemática das Senhas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>A Matemática das Senhas Seguras</h1>
+    <p class="description">
+      Descubra a força da sua senha calculando o <strong>Tamanho do Espaço de Busca (N<sup>L</sup>)</strong> 
+      e a <strong>Entropia de Informação</strong>.
+    </p>
+
+    <div class="card">
+      <label for="password-input">Digite ou teste uma senha:</label>
+      <input type="text" id="password-input" placeholder="Digite sua senha aqui...">
+
+      <div class="metrics">
+        <div class="metric">
+          <span>Tamanho do Alfabeto ($N$):</span>
+          <strong id="alphabet-size">0</strong>
+        </div>
+        <div class="metric">
+          <span>Comprimento ($L$):</span>
+          <strong id="password-length">0</strong>
+        </div>
+        <div class="metric">
+          <span>Combinações Possíveis ($N^L$):</span>
+          <strong id="combinations">0</strong>
+        </div>
+        <div class="metric">
+          <span>Entropia ($E$ bits):</span>
+          <strong id="entropy">0 bits</strong>
+        </div>
+      </div>
+
+      <div class="strength-bar-container">
+        <div id="strength-bar"></div>
+      </div>
+      <p id="strength-text">Digite algo para analisar.</p>
+    </div>
+
+    <div class="explanation">
+      <h2>Como Funciona a Matemática por Trás?</h2>
+      <ul>
+        <li><strong>Espaço de Busca ($N^L$):</strong> $N$ é a quantidade de tipos de caracteres disponíveis (ex: 26 minúsculas + 26 maiúsculas + 10 números + símbolos) e $L$ é o tamanho da senha.</li>
+        <li><strong>Entropia de Shannon ($E$):</strong> Medida em bits por $E = L \times \log_2(N)$. Quanto maior o valor em bits, mais difícil é adivinhar a senha por força bruta.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
